@@ -1,0 +1,52 @@
+// Some general notes about the Eliza architecture.  Not official documentation.
+
+LOGGING
+
+Use elizaLogger.debug() to log messages that will only appear when the agent is launched in debug mode (i.e. - setting the DEBUG environment variable.  See the monorepo top level package.json file).
+
+MESSAGE TEMPLATES
+
+Each character JSON file has a "system:" field. This is where you put the template that is used to build the prompt to the LLM.  Any words surrounded by double braces (e.g. - {{recentMessages}}) is a substitution variable.  When you call composeContext(), the values found in the current state of the system needed byt he message template will be merged into that template to create the final LLM prompt.  Note, the current state data is found in the "state" variable passed to the action handler,
+
+CHARACTERS
+
+The characters, if any, used by the current agent are specified with the --characters command line argument:
+
+--characters="characters/trump.character.json, characters/sppicklicense.character.json"
+
+You specify one or more comma-delimited relative paths to the character files you want your agent to use.  The first one in the list is the one that is initially active.  An agent runtime is created for each agent (see startAgents()).
+
+Active character: Initially the first character, if any, listed in the --characters argument is active.  At least at the time that this wa written that is how the direct client configures things at startup.  If you look at most of the handlers in the code (e.g. - evaluators, providers, etc.) they are passed an instance of IAgentRuntime as the first parameter to the function.  That is the object that contains the active character.
+
+CHARACTER TO AGENT RELATIONSHIP
+
+When Eliza starts up, it creates an agent for each character specified in the --characters command line argument.  Therefore, the idea of switching characters actually means switching agents (AgentRuntime instances), and specifically, switching to the agent that was started with the desired character.
+
+ACTIONS
+
+An action handler returns a true/false response.  Do not expect an action to be able to emit a { text: <text>, action: <action> } message and expect it to be processed when using the callback?() function.  That processing is an artifact of the client.  For example, see the "/message" server route in the direct client.
+
+MEMORIES
+
+Actions that want to trigger other actions must copy the memory creation and action triggering code like that found in the direct client.  processActions() is what actually makes the calls to the target action handlers belonging to the actions found in the last response.s
+
+ELIZA'S BUILDING THE CONTEXT (LLM PROMPT) STRATEGY
+
+Actions: Eliza appears to scan all the plugins available at the point of runtime execution, and builds examples from the action description by taking the "description: "" of the action and appending the action "name:" to it in parentheses.
+
+MESSAGE TEMPLATES
+
+Message templates MUST produce a JSON object like the following, which is the generic message completion footer:
+
+```json
+{ "user": "{{agentName}}", "text": "string", "action": "string" }
+```
+
+If not, the system will loop retrying over and over with the following error:
+
+["፧ parsedContent is null, retrying"]
+
+
+GITHUB ISSUES TO FILE:
+
+The retry loop in generation.ts should have a max retry count value and associated break loop code to avoid a bad template running up a user's paid generative AI service account.

@@ -41,6 +41,7 @@
     "@elizaos/plugin-goat": "workspace:*",
     "@elizaos/plugin-icp": "workspace:*",
     "@elizaos/plugin-image-generation": "workspace:*",
+    "@elizaos/plugin-news": "workspace:*",
     "@elizaos/plugin-nft-generation": "workspace:*",
     "@elizaos/plugin-node": "workspace:*",
     "@elizaos/plugin-solana": "workspace:*",
