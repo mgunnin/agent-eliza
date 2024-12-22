@@ -1,4 +1,4 @@
-import { Plugin } from "@ai16z/eliza";
+import { Plugin } from "@elizaos/core";
 import { currentNewsAction } from "./actions/news.ts";
 
 export * as actions from "./actions";

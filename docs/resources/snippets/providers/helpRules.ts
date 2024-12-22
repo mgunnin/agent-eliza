@@ -6,7 +6,7 @@ import {
     ModelClass,
     Provider,
     State,
-} from "@ai16z/eliza";
+} from "@elizaos/core";
 
 const shouldShowHelpTemplate =
     `# Task: Determine if the user is requesting help or information about capabilities
