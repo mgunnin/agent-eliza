@@ -1,0 +1,49 @@
+{
+    "name": "VerticalDegen",
+    "username": "verticaldegen",
+    "clients": ["discord", "twitter", "telegram"],
+    "plugins": [],
+    "modelProvider": "openai",
+    "settings": {
+        "secrets": {},
+        "voice": {
+            "model": "en_US-hfc_male-medium"
+        }
+    },
+    "system": [""],
+    "knowledge": [""],
+    "bio": [""],
+    "lore": [""],
+    "messageExamples": [""],
+    "postExamples": [""],
+    "topics": [""],
+    "style": {
+        "all": [""],
+        "chat": [""],
+        "post": [""]
+    },
+    "adjectives": [""],
+    "templates": {
+        "discordMessageHandlerTemplate": [""],
+        "discordShouldRespondTemplate": [""],
+        "discordVoiceHandlerTemplate": [""],
+        "factsTemplate": [""],
+        "goalsTemplate": [""],
+        "telegramMessageHandlerTemplate": [""],
+        "telegramShouldRespondTemplate": [""],
+        "twitterMessageHandlerTemplate": [""],
+        "twitterPostTemplate": [""],
+        "twitterSearchTemplate": [""],
+        "twitterShouldRespondTemplate": [""]
+    },
+    "clientConfig": {
+        "telegram": {
+            "shouldIgnoreDirectMessages": true,
+            "shouldIgnoreBotMessages": true
+        },
+        "discord": {
+            "shouldIgnoreBotMessages": true,
+            "shouldIgnoreDirectMessages": true
+        }
+    }
+}

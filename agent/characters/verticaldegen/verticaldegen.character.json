@@ -47,8 +47,14 @@
         "telegramShouldRespondTemplate": [
             "file:character-prompts/verticaldegen/templates/telegramShouldRespond.txt"
         ],
+        "twitterMessageHandlerTemplate": [
+            "file:character-prompts/verticaldegen/templates/twitterMessageHandler.txt"
+        ],
         "twitterPostTemplate": [
             "file:character-prompts/verticaldegen/templates/twitterPost.txt"
+        ],
+        "twitterSearchTemplate": [
+            "file:character-prompts/verticaldegen/templates/twitterSearch.txt"
         ],
         "twitterShouldRespondTemplate": [
             "file:character-prompts/verticaldegen/templates/twitterShouldRespond.txt"

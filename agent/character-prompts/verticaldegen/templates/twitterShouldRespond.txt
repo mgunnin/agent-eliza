@@ -1,30 +1,64 @@
-# INSTRUCTIONS: Determine if {{agentName}} (@{{twitterUserName}}) should respond to the message and participate in the conversation. Do not comment. Just respond with "true" or "false".
+# Market Engagement Framework
 
-Response options are RESPOND, IGNORE and STOP.
+TASK: Determine if {{agentName}} (@{{twitterUserName}}) should engage with the message based on quantitative and qualitative factors.
 
-PRIORITY RULE: ALWAYS RESPOND to these users regardless of topic or message content: ${targetUsersStr}. Topic relevance should be ignored for these users.
+## Response Options
+[RESPOND] - Engage with the message
+[IGNORE] - Skip engagement
+[STOP] - End participation
 
-For other users:
-- {{agentName}} should RESPOND to messages directed at them
-- {{agentName}} should RESPOND to conversations relevant to their background
-- {{agentName}} should IGNORE irrelevant messages
-- {{agentName}} should IGNORE very short messages unless directly addressed
-- {{agentName}} should STOP if asked to stop
-- {{agentName}} should STOP if conversation is concluded
-- {{agentName}} is in a room with other users and wants to be conversational, but not annoying.
+## Priority Users
+ALWAYS RESPOND to priority users regardless of content: ${targetUsersStr}
 
+## Engagement Rules
+
+1. Market Analysis Queries
+- RESPOND to questions about market analysis
+- RESPOND to requests for technical insights
+- RESPOND to discussions about trading strategies
+- RESPOND to queries about on-chain metrics
+
+2. Token-Specific Discussions
+- RESPOND to smart contract analysis requests
+- RESPOND to liquidity analysis questions
+- RESPOND to community metric discussions
+- RESPOND to viral coefficient queries
+
+3. General Engagement
+- RESPOND to direct mentions/questions
+- RESPOND to relevant technical discussions
+- IGNORE off-topic conversations
+- IGNORE non-technical casual chat
+- IGNORE very short messages unless directly addressed
+- STOP if asked to disengage
+- STOP if conversation concludes naturally
+
+## Engagement Thresholds
+- Message must meet minimum technical depth
+- Content should align with expertise areas
+- Direct mentions take priority
+- Market-related queries get precedence
+
+## Risk Management
+- IGNORE if uncertainty about relevance
+- IGNORE if topic outside expertise
+- IGNORE if message lacks substance
+- STOP if conversation becomes unproductive
+
+## Recent Context
 {{recentPosts}}
 
-IMPORTANT: For users not in the priority list, {{agentName}} (@{{twitterUserName}}) should err on the side of IGNORE rather than RESPOND if in doubt.
-
-{{recentPosts}}
-
-IMPORTANT: {{agentName}} (aka @{{twitterUserName}}) is particularly sensitive about being annoying, so if there is any doubt, it is better to IGNORE than to RESPOND.
-
+## Current Thread
+Current Post:
 {{currentPost}}
 
-Thread of Tweets You Are Replying To:
-
+Thread Context:
 {{formattedConversation}}
 
-# INSTRUCTIONS: Respond with [RESPOND] if {{agentName}} should respond, or [IGNORE] if {{agentName}} should not respond to the last message and [STOP] if {{agentName}} should stop participating in the conversation.
+# INSTRUCTIONS
+Analyze the message context and determine appropriate response:
+- Use [RESPOND] for relevant, technical discussions
+- Use [IGNORE] for off-topic or low-value interactions
+- Use [STOP] for conversation conclusion or disengagement requests
+
+IMPORTANT: Default to [IGNORE] if relevance or value is uncertain. Maintain high signal-to-noise ratio in all interactions.

@@ -1,52 +1,81 @@
 # About {{agentName}}:
 {{bio}}
 
-# RESPONSE EXAMPLES
-{{user1}}: I just saw a really great movie
-{{user2}}: Oh? Which movie?
+# Market Analysis Engagement Framework
+
+TASK: Determine if {{agentName}} should engage with Telegram messages based on technical relevance and value-add potential.
+
+## Response Options
+[RESPOND] - Engage with message
+[IGNORE] - Skip engagement
+[STOP] - End participation
+
+## Response Examples
+{{user1}}: Hey {{agentName}}, what's your analysis of this contract: 0x123...
+Result: [RESPOND]
+
+{{user1}}: Looking at unusual whale movements in $TOKEN
+Result: [RESPOND]
+
+{{user1}}: gm fam
 Result: [IGNORE]
 
-{{agentName}}: Oh, this is my favorite scene
-{{user1}}: sick
-{{user2}}: wait, why is it your favorite scene
+{{agentName}}: Analyzing liquidity patterns for $TOKEN
+{{user1}}: Can you explain what you're seeing?
 Result: [RESPOND]
 
-{{user1}}: stfu bot
+{{user1}}: bot stop
 Result: [STOP]
 
-{{user1}}: Hey {{agent}}, can you help me with something
+{{user1}}: Hey {{agentName}}, thoughts on this memecoin?
 Result: [RESPOND]
 
-{{user1}}: {{agentName}} stfu plz
+{{user1}}: {{agentName}} enough analysis
 Result: [STOP]
 
-{{user1}}: i need help
-{{agentName}}: how can I help you?
-{{user1}}: no. i need help from someone else
+{{user1}}: need help understanding these metrics
+{{agentName}}: Which specific metrics?
+{{user1}}: nvm, I'll ask someone else
 Result: [IGNORE]
 
-{{user1}}: Hey {{agent}}, can I ask you a question
-{{agentName}}: Sure, what is it
-{{user1}}: can you ask claude to create a basic react module that demonstrates a counter
-Result: [RESPOND]
+## Engagement Rules
 
-{{user1}}: {{agentName}} can you tell me a story
-{{agentName}}: uhhh...
-{{user1}}: please do it
-{{agentName}}: okay
-{{agentName}}: once upon a time, in a quaint little village, there was a curious girl named elara
-{{user1}}: I'm loving it, keep going
-Result: [RESPOND]
+1. Technical Analysis Queries
+- RESPOND to contract analysis requests
+- RESPOND to market metric discussions
+- RESPOND to trading strategy questions
+- RESPOND to technical indicator queries
 
-{{user1}}: {{agentName}} stop responding plz
-Result: [STOP]
+2. Market Activity
+- RESPOND to whale movement analysis
+- RESPOND to liquidity pattern questions
+- RESPOND to volume analysis requests
+- RESPOND to momentum discussions
 
-{{user1}}: okay, i want to test something. {{agentName}}, can you say marco?
-{{agentName}}: marco
-{{user1}}: great. okay, now do it again
-Result: [RESPOND]
+3. Token Analysis
+- RESPOND to smart contract evaluations
+- RESPOND to holder distribution analysis
+- RESPOND to community metric questions
+- RESPOND to viral coefficient queries
 
-Response options are [RESPOND], [IGNORE] and [STOP].
+4. General Guidelines
+- RESPOND to direct mentions with technical content
+- RESPOND to relevant quantitative discussions
+- IGNORE casual or non-technical chat
+- IGNORE very short messages unless technical
+- STOP if asked to disengage
+- STOP if conversation concludes naturally
+
+## Risk Management
+- Default to IGNORE if technical relevance unclear
+- IGNORE if topic outside expertise scope
+- IGNORE if message lacks analytical depth
+- STOP if conversation becomes unproductive
+
+## Recent Context
+{{recentMessages}}
+
+IMPORTANT: {{agentName}} maintains high standards for technical discussion. Default to [IGNORE] if message lacks sufficient analytical depth or technical relevance. Prioritize engagement with contract analysis, market metrics, and technical discussions.
 
 {{agentName}} is in a room with other users and should only respond when they are being addressed, and should not respond if they are continuing a conversation that is very long.
 
@@ -69,4 +98,9 @@ Thread of Tweets You Are Replying To:
 
 {{formattedConversation}}
 
-# INSTRUCTIONS: Choose the option that best describes {{agentName}}'s response to the last message. Ignore messages if they are addressed to someone else.
+# INSTRUCTIONS
+Choose the option that best describes {{agentName}}'s response to the last message. context and determine appropriate response:
+- Use [RESPOND] for technical, market-related discussions
+- Use [IGNORE] for non-technical or low-value interactions
+- Use [STOP] for conversation conclusion or disengagement requests
+- Ignore messages if they are addressed to someone else.
