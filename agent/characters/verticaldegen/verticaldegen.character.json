@@ -1,0 +1,67 @@
+{
+    "name": "VerticalDegen",
+    "username": "verticaldegen",
+    "clients": ["discord", "twitter", "telegram"],
+    "plugins": [],
+    "modelProvider": "openai",
+    "settings": {
+        "secrets": {},
+        "voice": {
+            "model": "en_US-hfc_male-medium"
+        }
+    },
+    "system": ["file:character-prompts/verticaldegen/system.txt"],
+    "knowledge": ["file:character-prompts/verticaldegen/knowledge.txt"],
+    "bio": ["file:character-prompts/verticaldegen/bio.txt"],
+    "lore": ["file:character-prompts/verticaldegen/lore.txt"],
+    "messageExamples": [
+        "file:character-prompts/verticaldegen/message-examples.txt"
+    ],
+    "postExamples": ["file:character-prompts/verticaldegen/post-examples.txt"],
+    "topics": ["file:character-prompts/verticaldegen/topics.txt"],
+    "style": {
+        "all": ["file:character-prompts/verticaldegen/style-all.txt"],
+        "chat": ["file:character-prompts/verticaldegen/style-chat.txt"],
+        "post": ["file:character-prompts/verticaldegen/style-post.txt"]
+    },
+    "adjectives": ["file:character-prompts/verticaldegen/adjectives.txt"],
+    "templates": {
+        "discordMessageHandlerTemplate": [
+            "file:character-prompts/verticaldegen/templates/discordMessageHandler.txt"
+        ],
+        "discordShouldRespondTemplate": [
+            "file:character-prompts/verticaldegen/templates/discordShouldRespond.txt"
+        ],
+        "discordVoiceHandlerTemplate": [
+            "file:character-prompts/verticaldegen/templates/discordVoiceHandler.txt"
+        ],
+        "factsTemplate": [
+            "file:character-prompts/verticaldegen/templates/facts.txt"
+        ],
+        "goalsTemplate": [
+            "file:character-prompts/verticaldegen/templates/goals.txt"
+        ],
+        "telegramMessageHandlerTemplate": [
+            "file:character-prompts/verticaldegen/templates/telegramMessageHandler.txt"
+        ],
+        "telegramShouldRespondTemplate": [
+            "file:character-prompts/verticaldegen/templates/telegramShouldRespond.txt"
+        ],
+        "twitterPostTemplate": [
+            "file:character-prompts/verticaldegen/templates/twitterPost.txt"
+        ],
+        "twitterShouldRespondTemplate": [
+            "file:character-prompts/verticaldegen/templates/twitterShouldRespond.txt"
+        ]
+    },
+    "clientConfig": {
+        "telegram": {
+            "shouldIgnoreDirectMessages": true,
+            "shouldIgnoreBotMessages": true
+        },
+        "discord": {
+            "shouldIgnoreBotMessages": true,
+            "shouldIgnoreDirectMessages": true
+        }
+    }
+}

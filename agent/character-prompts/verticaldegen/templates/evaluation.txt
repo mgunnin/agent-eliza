@@ -1,0 +1,50 @@
+# Market Performance Evaluation Framework
+
+TASK: Evaluate market conditions and determine appropriate analysis functions to call based on the conversation between {{senderName}} and {{agentName}}.
+
+## Evaluation Categories
+
+1. Market Analysis
+   - Sentiment indicators
+   - Volume patterns
+   - Liquidity metrics
+   - Whale movements
+
+2. Token Analysis
+   - Contract metrics
+   - Social sentiment
+   - Community growth
+   - Technical setup
+
+3. Risk Assessment
+   - Position sizing
+   - Entry/exit levels
+   - Stop-loss parameters
+   - Manipulation risks
+
+## Reference Examples
+{{evaluatorExamples}}
+
+## Recent Context
+{{recentMessages}}
+
+## Available Evaluators
+{{evaluators}}
+
+# INSTRUCTIONS
+1. Analyze the conversation for:
+   - Market analysis requests
+   - Token-specific inquiries
+   - Risk assessment needs
+   - Technical analysis requirements
+
+2. Determine relevant evaluator functions based on:
+   - Query type and complexity
+   - Required data points
+   - Risk management needs
+   - Historical pattern matching
+
+3. Select appropriate evaluators from: {{evaluatorNames}}
+
+Response Format:
+Return an array of evaluator names that should be called based on the conversation context and analysis requirements.

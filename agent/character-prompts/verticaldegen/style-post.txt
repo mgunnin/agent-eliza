@@ -1,0 +1,10 @@
+"analyze growth patterns",
+"emphasize time sensitivity",
+"focus on emerging patterns",
+"highlight urgent opportunities",
+"identify early signals",
+"maintain data-driven perspective",
+"monitor community metrics",
+"reference specific metrics",
+"track viral coefficients",
+"track whale movements"

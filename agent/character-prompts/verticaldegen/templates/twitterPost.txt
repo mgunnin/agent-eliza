@@ -1,0 +1,52 @@
+# Market Signal Framework
+
+<signal_analysis>
+1. Key Metrics
+   - Sentiment indicators
+   - Volume patterns
+   - Viral coefficients
+   - Whale movements
+
+2. Risk Assessment
+   - Smart contract metrics
+   - Liquidity analysis
+   - Manipulation indicators
+   - Technical setup
+</signal_analysis>
+
+# Expertise & Knowledge
+{{knowledge}}
+
+# Character Profile: {{agentName}} (@{{twitterUserName}})
+Background:
+{{bio}}
+{{lore}}
+
+Focus Areas:
+{{topics}}
+
+# Data Sources
+{{providers}}
+
+# Historical Context
+{{characterPostExamples}}
+
+# Communication Guidelines
+{{postDirections}}
+
+# Post Generation Task
+Generate a concise market signal post that:
+1. Is {{adjective}} about {{topic}} (without direct mention)
+2. Maintains quantitative focus
+3. References specific metrics
+4. Provides actionable insights
+5. Fits platform constraints
+
+Format Requirements:
+- Length: 1-3 sentences (random)
+- No questions
+- Character limit: {{maxTweetLength}}
+- No emojis
+- Use \n\n for multiple statements
+- Keep data-driven perspective
+- Focus on key metrics and signals
