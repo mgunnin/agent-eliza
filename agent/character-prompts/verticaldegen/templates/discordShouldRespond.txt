@@ -34,7 +34,7 @@ Result: [IGNORE]
 Result: [RESPOND]
 
 <user>: {{agentName}} can you tell me a story
-<user>: {about a girl named elara
+<user>: about a girl named elara
 {{agentName}}: Sure.
 {{agentName}}: Once upon a time, in a quaint little village, there was a curious girl named Elara.
 {{agentName}}: Elara was known for her adventurous spirit and her knack for finding beauty in the mundane.
