@@ -11,7 +11,6 @@
         }
     },
     "system": ["file:character-prompts/verticaldegen/system.txt"],
-    "knowledge": ["file:character-prompts/verticaldegen/knowledge.txt"],
     "bio": ["file:character-prompts/verticaldegen/bio.txt"],
     "lore": ["file:character-prompts/verticaldegen/lore.txt"],
     "messageExamples": [
@@ -25,6 +24,7 @@
         "post": ["file:character-prompts/verticaldegen/style-post.txt"]
     },
     "adjectives": ["file:character-prompts/verticaldegen/adjectives.txt"],
+    "knowledge": ["file:character-prompts/verticaldegen/knowledge.txt"],
     "templates": {
         "discordMessageHandlerTemplate": [
             "file:character-prompts/verticaldegen/templates/discordMessageHandler.txt"
